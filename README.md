@@ -25,7 +25,7 @@
 </div>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/python-3670B0?style=for-the-badge&logo=python&logoColor=BE81F7" />&nbsp
+  <img src="https://img.shields.io/badge/python-3210B0?style=for-the-badge&logo=python&logoColor=BE81F7" />&nbsp
  <img src="https://img.shields.io/badge/C-20232a.svg?style=for-the-badge&logo=C&logoColor=61DAFB" />&nbsp
 </div>
 
