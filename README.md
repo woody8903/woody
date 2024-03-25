@@ -63,6 +63,8 @@
   <a href="mailto:gwoody8903@gmail.com">
     <img
       src="https://img.shields.io/badge/gwoody8903@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp
+  <a href="http://www.notion.so/8903">
+    <img src="https://img.shields.io/badge/Notion-F3F3F3.svg?style=for-the-badge&logo=notion&logoColor=black" />&nbsp
   </a>
 </div>
 
