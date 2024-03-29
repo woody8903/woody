@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 기초</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* red 클래스가 붙은 h1요서들 선택 */
+        h1. red {
+
+        }
+
+        .green {
+            color : green;
+        }
+
+        /* bold 클래스가 붙은 요소들 선택 */
+        .bold {
+            font-weight : bold;
+        }
+
+        #content {
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+            padding-left: 50px;
+            width: 300px;
+            height: 300px;
+        }
+        /* content에 p이렇게 쓰면 자손 선택, 반대는 자식 선댁, */
+        #content >#title1 {
+            color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id ="content">
+        <h2 id="title1">여기에 큰제목</h2>
+        <h2 id="title2">여기에 제목이 있어요</h2>
+        <p>여기에 제목이 있어요</p>
+    </div>
+    <div>
+        <p>콘텐츠 안에 또 다른 콘텐츠1</p>
+        <p>콘텐츠 안에 또 다른 콘텐츠2</p>
+     </div>
+
+    </div>
+</body> 
+</html>
