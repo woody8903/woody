@@ -2,12 +2,12 @@
 
 int main(void)
 {
-    char ch;
-
-    printf("문자 입력: ");
-    scanf("%c", &ch);
-
-    printf("Q문자의 아스키 코드 값 '%c' is: %d\n", ch, ch);
+    printf("apple이 저장된 시작 주소 값 : %p\n", "apple");
+    printf("두 번째 문자의 주소 값 : %p\n", "apple" + 1);
+    printf("첫 번째 문자 : %c\n", *"apple");
+    printf("두 번째 문자 : %c\n", *("apple" + 2));
+    printf("배열로 표현한 세 번째 문자 : %c\n", "apple"[2]);
 
     return 0;
+
 }
