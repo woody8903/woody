@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매장 및 직원 관리 시스템</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+
+    .nav-container {
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    header button {
+        background-color: #333;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        cursor: pointer;
+        float: left;
+    }
+
+    header button:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #333;
+        font-weight: normal;
+    }
+
+    ul {
+        list-style: none;
+        padding: 100;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+
+    .item input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .checked {
+        text-decoration: line-through;
+        color: #bbb;
+    }
+
+    #memoSection {
+        margin-top: 40px;
+        background-color: #fafafa; /* 메모 섹션 배경색 */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 세련된 그림자 효과 */
+    }
+
+    #memoSection h2 {
+        color: #333; /* 제목 색상 */
+        margin-bottom: 20px; /* 제목과 입력 필드 사이의 여백 */
+    }
+
+    #userMemoInput {
+        width: calc(100% - 90px); /* 버튼 너비를 고려한 입력 필드 너비 */
+        padding: 10px;
+        border: 1px solid #ccc; /* 테두리 스타일 */
+        border-radius: 4px; /* 둥근 테두리 */
+        margin-right: 10px; /* 입력 필드와 버튼 사이의 간격 */
+    }
+
+    button {
+        background-color: #525455; /* 버튼 배경색 */
+        color: white; /* 버튼 텍스트 색상 */
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px; /* 둥근 테두리 */
+        cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    }
+
+    button:hover {
+        background-color: #959998; /* 버튼 호버 색상 */
+    }
+
+    #userMemoList {
+        list-style-type: none; /* 기본 리스트 스타일 제거 */
+        padding: 0;
+        margin-top: 20px; /* 리스트와 버튼 사이의 간격 */
+    }
+
+    #userMemoList li {
+        background-color: #e7e7e7; /* 리스트 아이템 배경색 */
+        padding: 5px;
+        margin-bottom: 8px; /* 아이템 간 간격 */
+        border-radius: 4px; /* 둥근 테두리 */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    </style>
+</head>
+<body>
+<header>
+<div class="nav-container">
+    <button onclick="location.href='/schedule'">스케줄 관리</button>
+    <button onclick="location.href='#payroll'">급여 관리</button>
+    <button onclick="location.href='#inventory'">재고 체크</button>
+    <button onclick="location.href='#notices'">중요 사항 알림</button>
+    <button onclick="location.href='/logout'">로그아웃</button>
+</div>
+</header>
+
+<div class="container">
+    <section>
+        <h2>해야 할 일</h2>
+        <ul id="todoList"></ul>
+        <input type="text" id="todoInput" placeholder="할 일 추가...">
+        <button onclick="addTodo()">추가</button>
+    </section>
+    <hr>
+    <section>
+        <h2>만들어야 할 것</h2>
+        <ul id="doList"></ul>
+        <input type="text" id="doInput" placeholder="할 것 추가...">
+        <button onclick="adddo()">추가</button>
+    </section>
+    <hr>
+    <section>
+        <h2>사야 할 것</h2>
+        <ul id="shoppingList"></ul>
+        <input type="text" id="shoppingInput" placeholder="살 것 추가...">
+        <button onclick="addShoppingItem()">추가</button>
+    </section>
+    </div>
+
+<div class="container" id="memoSection">
+    <h2>할말이 있다 !</h2>
+    <input type="text" id="userMemoInput" placeholder="내가 할말은 . . .">
+    <button onclick="addUserMemo()">메모 추가</button>
+    <ul id="userMemoList">
+        <!-- 예시 메모 -->
+        <li>김준영(매니저님) : 나 아닌데 ??</li>
+        <li>김효진(직원) : 매니저님이다에 모든걸 걸어요</li>
+        <li>김태현(직원) : 누가 또 컵깼나요! 범인 찾습니다</li>
+        <!-- 사용자가 추가한 메모가 여기에 동적으로 표시됩니다 -->
+    </ul>
+</div>
+
+<script>
+function addTodo() {
+    var input = document.getElementById("todoInput");
+    var newItem = input.value.trim();
+    if (newItem) {
+        var li = document.createElement("li");
+        li.innerHTML = `<input type="checkbox" onclick="toggleCheck(this)">${newItem}`;
+        document.getElementById("todoList").appendChild(li);
+        input.value = ""; // 입력 필드 초기화
+    }
+}
+
+function adddo() {
+    var input = document.getElementById("doInput");
+    var newItem = input.value.trim();
+    if (newItem) {
+        var li = document.createElement("li");
+        li.innerHTML = `<input type="checkbox" onclick="toggleCheck(this)">${newItem}`;
+        document.getElementById("doList").appendChild(li);
+        input.value = ""; // 입력 필드 초기화
+    }
+}
+
+function addShoppingItem() {
+    var input = document.getElementById("shoppingInput");
+    var newItem = input.value.trim();
+    if (newItem) {
+        var li = document.createElement("li");
+        li.innerHTML = `<input type="checkbox" onclick="toggleCheck(this)">${newItem}`;
+        document.getElementById("shoppingList").appendChild(li);
+        input.value = ""; // 입력 필드 초기화
+    }
+}
+
+function toggleCheck(checkbox) {
+    if (checkbox.checked) {
+        checkbox.parentNode.classList.add("checked");
+    } else {
+        checkbox.parentNode.classList.remove("checked");
+    }
+}
+
+function addUserMemo() {
+    var input = document.getElementById("userMemoInput");
+    var memo = input.value.trim();
+    if (memo) {
+        var li = document.createElement("li");
+        li.textContent = memo; // XSS 방지를 위해 innerHTML 대신 textContent 사용
+        document.getElementById("userMemoList").appendChild(li);
+        input.value = ""; // 입력 필드 초기화
+    }
+}
+
+</script>
+</body>
+</html>
+
