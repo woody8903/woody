@@ -1,10 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=Woody%20render&fontSize=90)
 
 
-- 👋 Hi, I’m woody
-- 👀 I’m interested in coffee and bicycle
-- 🌱 I’m currently learning programming at Poly
-- ⚡ Fun fact: 
+- 👋 Hi, 개발자를 꿈꾸는 바리스타 입니다.
+- 👀 I’m 취미는 커피와 자전거타기. 
 
 
 <!--내용 부분-->
