@@ -71,6 +71,7 @@ woody8903/woody8903 is a ✨ special ✨ repository because its `README.md` (thi
 You can click the Preview link to take a look at your changes.
 --->
 
+[woody G의 이력서 입니다_gwoody8903.pdf](https://github.com/woody8903/woody/files/14902895/woody.G._gwoody8903.pdf)
 
 
 
