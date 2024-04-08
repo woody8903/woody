@@ -66,7 +66,7 @@ You can click the Preview link to take a look at your changes.
 <br>
 <br>
 
-<h4>나의 이력서가 궁금하다면</h4>
+<h4>교수님~~ 아래와 오른쪽 velog를 봐주세요 ~!!! </h4>
 
 <a href="https://github.com/woody8903/woody/files/14903055/woody.G._gwoody8903.pdf">
     <img src="https://cdn.pixabay.com/photo/2017/11/13/13/34/black-jane-doe-2945634_1280.png" alt="Image" width="100" height="100">&nbsp
