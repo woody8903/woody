@@ -63,8 +63,6 @@ woody8903/woody8903 is a ✨ special ✨ repository because its `README.md` (thi
 You can click the Preview link to take a look at your changes.
 --->
 
-<br>
-<br>
 
 <h4>교수님~~ 아래와 오른쪽 velog를 봐주세요 ~!!! </h4>
 
