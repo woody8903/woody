@@ -69,9 +69,14 @@ woody8903/woody8903 is a ✨ special ✨ repository because its `README.md` (thi
 You can click the Preview link to take a look at your changes.
 --->
 
+<br>
+<br>
 
-나의 이력서
-(https://github.com/woody8903/woody/files/14902895/woody.G._gwoody8903.pdf)
+<h4>나의 이력서가 궁금하다면</h4>
+
+<img
+      src="https://img.shields.io/badge/gwoody8903@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp
+      <a href="[http://www.notion.so/8903](https://github.com/woody8903/woody/files/14902895/woody.G._gwoody8903.pdf)">
 
 
 
