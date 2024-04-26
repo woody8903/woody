@@ -9,12 +9,48 @@
             color:blue;
         }
     </style>
-    <script>
-        alert('안녕');
-        
-    </script>
 </head>
 <body>
-    <h1>안녕 제목이야</h1>
+    <h1 onclick =""id ="title">안녕 제목이야</h1>
+    <button onclick="changeText()">눌러보세요</button>
+    
+    <button onclick="print()">인쇄</button>
+
+    <button onclick="openNewTap()">새 창</button>
+
+    <button onclick="closeTap()">새창 닫기</button>
+
+    <button onclick="fullscreen()">전체화면 보기</button>
+
+    <img id="img" width="500" src="https://www.gseek.kr/upload/etc/idlist/202402/26/0dbsakfvxgdrq/klnii3l5g7ut4.jpg" alt="">
+
+    <script>
+        let tap = null;
+
+        function fullscreen() {
+            document.body.requestFullscreen();
+        }
+
+        function openNewTap() {
+            tap = window.open('https://naver.com')
+        }
+
+        function closeTap(){
+            tap.close();
+        }
+
+        function changeText() {
+            // html요소의 내용 변경
+            document.getElementById('title').innerHTML = '제목을 <mark>바꿔보자</mark>';
+            
+            //html 요소의 속성 변경
+            document.getElementById('img').src = 'https://www.gseek.kr/upload/course_image/202402/26/76f44cd2-70d6-4def-83cc-2d49a8c68bc1.jpg';
+            ocument.getElementById('img').width= '1000';
+        
+            //html 요소의 스타일 변경
+            document.getElementById('title').style.color = 'red';
+        }
+
+    </script>
 </body>
 </html>
