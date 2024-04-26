@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력폼 실습</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>네이버검색</legend>
+            <input type="text" name="query" required="">
+            <button type= "submit"> 검색</button>
+        </fieldset>
+    </form>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>기본 정보</legend>
+            <ul>
+                <li>이름 : <input name="name" type="text" value="" placeholder="실명을 입력해주세요."></li>
+                <li>나이 : <input name="age" type="number" Value="" min="0" max="100" placeholder="나이"></li>
+                <li>비밀번호 : <input name="password" type="password"></li>
+
+            </ul>
+        </fieldset>
+<fieldset>
+        <legend>부가정보</legend>
+        
+        <li>
+            거주지역 :
+            <select name="loc" id="">
+                <option value="서울">서울</option>
+                <option value="경기">경기</option>
+                <option value="경상도">경상남도</option>
+                <option value="제주도">제주도</option>
+            </select>
+        </li>
+        <li>
+            기술:
+            <input type="checkbox" name="tec" id="cb1" value="1">
+            <label for="cb1">HTML</label>
+            <input type="checkbox" name="tec" id="cb2" value="2">
+            <label for="cb2">CSS</label>
+            <input type="checkbox" name="tec" id="cb3">
+            <label for="cb3">JS</label> 
+        </li>
+        <li>
+            과정
+            <input type="radio" name="과" id="rd1">
+            <label for="">통학</label>
+            <input type="radio" name="과" id="rd2">
+            <label for="">기숙사</label>
+            <input type="radio" name="과" id="rd3">
+            <label for="">자퇴</label>
+        </li>
+        <li>
+            과티 색상 선택 : 
+            <input type="color" name="" id="">
+        </li>
+        <li>
+            이메일 :<input type="email" name="" id="">
+        </li>
+        <li>
+            <input type="file" name="" id="">
+        </li>
+    </fieldset>
+            프로필 사진
+        <li>
+            입학일
+            <input type="date" name="" id="">
+        </li>
+        <li>
+            밥시간 :
+            <input type="time" name="" id="">
+        </li>
+
+        
+
+        <fieldset>
+            <legend>자기소개</legend>
+            <textarea placeholder="200자 이상, 500자 이하 입력해주세요." minlength="200" ame="" id="" cols="50" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>설문</legend>
+            <ul>
+                <li>
+                    프로젝트 진척:
+                    <input type="range" max="100" value="20" name="">
+                
+                </li>
+                
+            </ul>
+        </fieldset>
+        <p><button type="submit" >제출</button></p>
+    </form>
+
+</body>
+
+</html>
