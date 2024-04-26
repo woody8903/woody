@@ -11,23 +11,75 @@
     </style>
 </head>
 <body>
+    <input type="text" name="" id="input">
+
+    <button onclick="printDoc">누르면 창을 닫아요</button>
+
+    
     <h1 onclick =""id ="title">안녕 제목이야</h1>
 
-    // 각각 버튼들에 function 함수를 호출해서 사용
+    <input id="input" type="text">
+    <button onclick="getInputText()">input 값 읽기</button>
+    <button onclick="getPrompt()">prompt 읽기</button>
+    <button onclick="alert(text)">text 변수</button>
+    <button id = "submit=">제출</button>
+
     <button onclick="changeText()">눌러보세요</button>
-    
     <button onclick="print()">인쇄</button>
-
     <button onclick="openNewTap()">새 창</button>
-
     <button onclick="closeTap()">새창 닫기</button>
-
     <button onclick="fullscreen()">전체화면 보기</button>
 
     <img id="img" width="500" src="https://www.gseek.kr/upload/etc/idlist/202402/26/0dbsakfvxgdrq/klnii3l5g7ut4.jpg" alt="">
 
     <script>
+
+        function printDoc() {
+            if (!document.getElementById('input').value) {
+                return;
+            }
+            if (!confirm('진짜로 인쇄 할래요?') == false ) {
+                return;
+
+            }
+                window.print();
+            
+            
+        }
+
+        /*(function () {
+
+            var text = '어떤 값'
+
+        document.getElementById('submit').onclick = checkLen;
+
+        function checkLen() {
+        var text = document.getElementById('input').value;
+
+        console.log(text);
+        document.write(text);
+        document.write('<hi>되나?</h1>');
+
+        if (text.length < 5) {
+            alert('5글자 이상으로 작성해');
+            return false
+        }    
+        return true;
+        }
+        
+
+        function getPrompt() {
+            var text = window.prompt('아무거나 써보세요');
+            alert(text);
+        }
+
+        function getInputText(){
+            var text = document.getElementById('input').value;
+            alert(text);
+        }
+
         let tap = null;
+     
 
         function fullscreen() {
             document.body.requestFullscreen();
@@ -52,7 +104,8 @@
             //html 요소의 스타일 변경
             document.getElementById('title').style.color = 'red';
         }
-
+        
+                 */
     </script>
 </body>
 </html>
