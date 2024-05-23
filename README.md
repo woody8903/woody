@@ -64,15 +64,6 @@ You can click the Preview link to take a look at your changes.
 --->
 
 
-<h4>**** 교수님~~ 아래 이력서와 오른쪽 velog에 school 시리즈를 봐주세요 ~!!! **** </h4>
-
-<a href="https://github.com/woody8903/woody/files/14903055/woody.G._gwoody8903.pdf">
-    <img src="https://cdn.pixabay.com/photo/2017/11/13/13/34/black-jane-doe-2945634_1280.png" alt="Image" width="100" height="100">&nbsp
-  </a>
-
-
-
-
 
 
 
